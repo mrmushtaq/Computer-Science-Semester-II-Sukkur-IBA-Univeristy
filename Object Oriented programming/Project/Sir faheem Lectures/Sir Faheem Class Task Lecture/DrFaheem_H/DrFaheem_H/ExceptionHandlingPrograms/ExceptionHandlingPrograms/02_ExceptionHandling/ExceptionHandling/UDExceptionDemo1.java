@@ -1,0 +1,55 @@
+
+class CGPA extends Exception
+{
+
+int cgpa = 0;
+
+	CGPA(int cgpa)
+	{
+		this.cgpa = cgpa;
+	}
+
+	public String toString()
+	{
+		return "CGPA cant be negative";
+	}
+
+	public void setCGPA(int c)
+	{
+		cgpa=c;
+	}
+	public int getCGPA()
+	{
+		return cgpa;
+	}
+
+}
+
+
+
+
+
+class UDExceptionDemo1
+{
+
+	public static void main(String args[]) throws Exception
+		{
+		
+		int a = -9;
+		
+		CGPA o=null;
+
+		if (a<0)
+		{
+			throw new CGPA(a);
+		}
+		else
+		{
+			o = new CGPA(a);
+		}
+
+		System.out.println("The CPGA is " + o.getCGPA());
+		
+		}
+
+}

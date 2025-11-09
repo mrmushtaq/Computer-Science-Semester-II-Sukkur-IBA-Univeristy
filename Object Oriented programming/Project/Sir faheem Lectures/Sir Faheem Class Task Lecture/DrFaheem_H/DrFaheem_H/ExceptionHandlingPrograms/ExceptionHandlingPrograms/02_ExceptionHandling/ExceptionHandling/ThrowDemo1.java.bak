@@ -1,0 +1,18 @@
+class ThrowDemo1
+{
+
+	public static void main(String args[])
+		{
+
+		System.out.println("Start of Program");
+		throw new ArrayIndexOutOfBoundsException();
+		System.out.println("After Exception");
+
+		}
+
+
+
+
+
+
+}

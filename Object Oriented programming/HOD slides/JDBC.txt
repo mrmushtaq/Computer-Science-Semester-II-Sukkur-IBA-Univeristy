@@ -1,0 +1,114 @@
+Seven Steps Process
+1- Import Require Package
+import java.sql.* ;
+
+2- Load the Driver
+(a) Download ucanaccess drivers (https://ucanaccess.sourceforge.net/site.html) --> Extract the rar file -- > You will see five jar files and copy thoe files
+(b) Create a new Java Project, Add package in a project (right click to src --> New --> Package [accessLib]) --. Paste here copied five jar files
+(c) Right Click on a created package --> Add as a Library --? From leve choose Module Library --> OK
+
+3- Create and Establish Connection using driver Manager with the database
+Connection con = DriverManager.getConnection("jdbc:ucanaccess://D:\\JDBC23\\EventsInfo.accdb");
+
+4- Create statement using the Connection Object
+Statement stmt = con.createStatement () ;
+
+5- Execute a Query
+ResultSet rs = stmt.executeQuery ("Select * from Events") ;
+
+6- Process the Results
+            String eid,ename,edate,evenue ;
+            while (rs.next())
+            {
+                eid = rs.getString("EventID") ;
+                ename = rs.getString("EventName") ;
+                edate = rs.getString("EventDate") ;
+                evenue = rs.getString("EventVenue") ;
+                System.out.println(eid + " , " + ename + " , " + edate + " , " + evenue) ;
+            }
+
+7- Close the Connection
+            con.close();
+
+
+=============
+Whole Code
+=============
+Step # 1
+import java.sql.* ;
+public class JDBC1
+{
+    public static void main (String args []) throws SQLException {
+      
+        try
+        {
+	// Step # 2 and3
+            Connection con = DriverManager.getConnection("jdbc:ucanaccess://D:\\JDBC23\\EventsInfo.accdb");
+	// Step # 4
+            Statement stmt = con.createStatement () ;
+	// Step #5
+            ResultSet rs = stmt.executeQuery ("Select * from Events") ;
+	// Step # 6
+            String eid,ename,edate,evenue ;
+            while (rs.next())
+            {
+                eid = rs.getString("EventID") ;
+                ename = rs.getString("EventName") ;
+                edate = rs.getString("EventDate") ;
+                evenue = rs.getString("EventVenue") ;
+                System.out.println(eid + " , " + ename + " , " + edate + " , " + evenue) ;
+            }
+	// Step # 7
+            con.close();
+        }
+        catch (SQLException exp)
+        {
+            System.out.println(exp.getMessage());
+        }
+    }
+}
+
+
+package com.company;
+//Step 1: Import Package
+import java.sql.* ;
+public class Main
+{
+    public static void main(String[] args)
+    {
+
+        /*
+        Step 2: Load Driver
+        (a) Download ucanaccess drivers (https://ucanaccess.sourceforge.net/site.html) --> Extract the rar file -- > You will see five jar files and copy thoe files
+        (b) Create a new Java Project, Add package in a project (right click to src --> New --> Package [accessLib]) --. Paste here copied five jar files
+        (c) Right Click on a created package --> Add as a Library --? From level choose Module Library --> OK
+         */
+
+        try
+        {
+            // Step # 3
+            Connection con = DriverManager.getConnection("jdbc:ucanaccess://D:\\JDBC2024\\EventsInfo2024.accdb");
+            // Step # 4
+            Statement stmt = con.createStatement () ;
+            // Step #5
+            ResultSet rs = stmt.executeQuery ("Select * from Events") ;
+            // Step # 6
+            String eid,ename,edate,evenue ;
+            while (rs.next())
+            {
+                eid = rs.getString("Eid") ;
+                ename = rs.getString("EName") ;
+                edate = rs.getString("EVenue") ;
+                evenue = rs.getString("EDate") ;
+                System.out.println(eid + " , " + ename + " , " + edate + " , " + evenue) ;
+            }
+            // Step # 7
+            con.close();
+        }
+        catch (SQLException exp)
+        {
+            System.out.println(exp.getMessage());
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+// Download MySQL
+https://dev.mysql.com/downloads/installer/
+//Setup Link
+https://drive.google.com/file/d/1G8qTOmOzAvj9FUFmilrTVZzGXTT5_Ps9/view?usp=share_link
+// Install My SQL
+https://www.youtube.com/watch?v=GwHpIl0vqY4
+
+
+// Download MySQL JDBC Drivers
+https://dev.mysql.com/downloads/connector/j/
+
+Learn MySQL
+https://www.youtube.com/watch?v=fFgdnS1laA0
+
+
+===============
+JDBC with ySQL
+===============
+import java.sql.* ;
+public class TestJDBCWithMySQL
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/EventsInfo","root" , "Abcde1234%") ;
+            Statement stmt = conn.createStatement () ;
+            ResultSet rs = stmt.executeQuery ("Select * from Events") ;
+            String eid,ename,edate,evenue ;
+            while (rs.next())
+            {
+                eid = rs.getString("EventID") ;
+                ename = rs.getString("EventName") ;
+                edate = rs.getString("EventDate") ;
+                evenue = rs.getString("EventVenue") ;
+                System.out.println(eid + " , " + ename + " , " + edate + " , " + evenue);
+            }
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+
+        }
+    }
+}

@@ -1,0 +1,98 @@
+import java.util.Scanner;
+
+class Employee
+{
+
+	int empID;
+	String empName;
+	private double empSalary;
+	
+
+	
+	Employee(int empID, String empName, double empSalary)
+	{
+		this.empID = empID;
+		this.empName = empName;
+		this.empSalary = empSalary; 
+		
+	}
+	
+	void setEmpSalary(double salary)
+	{
+		empSalary = salary;
+	}
+
+	double getEmpSalary()
+	{
+		return empSalary;
+	}
+
+	void getData()
+	{
+		Scanner sc = new Scanner(System.in);
+			
+		System.out.print("Enter Employee  ID : ");
+		empID = sc.nextInt();
+
+		sc.nextLine();
+		System.out.print("Enter Employee  Name : " );
+		empName = sc.nextLine();
+
+		System.out.print("Enter  Employee  Salary : ");
+		empSalary = sc.nextDouble();
+
+	}
+
+	void setData()
+	{
+		empID = 1;
+		empName = "Kashish";
+		empSalary = 0; 
+		
+	}
+	
+	void setData(int empID, String empName, double empSalary)
+	{
+		this.empID = empID;
+		this.empName = empName;
+		this.empSalary = empSalary; 
+		
+	}
+		
+	void showData()
+	{
+		System.out.println("Employee  ID : " + empID);
+		System.out.println("Employee  Name : " + empName);
+		System.out.println("Employee  Salary : " + empSalary);
+	}	
+
+}
+
+public class ProgramEmp9
+{
+
+	public static void main(String args[])
+	{
+		Employee e1;
+		e1 = new Employee(2,"Sattar",0);
+		
+		Employee e2 = new Employee(1,"EYLAF",0);
+		//Employee e3 = new Employee();
+		
+		e1.showData();
+		e2.showData();
+		//e3.showData();
+		
+		
+
+
+
+
+
+	}
+
+}
+
+
+
+

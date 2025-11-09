@@ -1,0 +1,30 @@
+class FinallyDemo1
+{
+
+	public static void main(String arg[]) 
+	{	
+		int name[]={1,2,3,4,5};
+		    System.out.println("Start of PRogram");
+		try
+		{
+			System.out.println("Hi " +name[6]);
+		}
+	
+		
+		finally
+		{
+		
+		  System.out.println("Inside finally Block");
+
+		}
+
+
+	    System.out.println("End of PRogram");
+		
+	}
+
+
+
+
+
+}

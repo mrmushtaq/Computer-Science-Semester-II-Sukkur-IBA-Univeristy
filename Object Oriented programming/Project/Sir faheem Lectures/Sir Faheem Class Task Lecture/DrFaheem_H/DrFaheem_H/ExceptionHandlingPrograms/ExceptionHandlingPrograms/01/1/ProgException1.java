@@ -1,0 +1,22 @@
+class ProgException1
+{
+
+
+	public static void main(String args[])
+
+	{
+	
+	System.out.println("\n Start of Program");
+
+	int no1 = 10;
+	int no2 = 0;
+
+ 	int no3 = no1/no2;      // error
+
+	System.out.println("\n End of Program");
+	
+	}
+
+
+
+}

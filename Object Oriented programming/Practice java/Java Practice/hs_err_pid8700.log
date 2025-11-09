@@ -1,0 +1,257 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_IN_PAGE_ERROR (0xc0000006) at pc=0x00007ff89dc319a9, pid=8700, tid=9016
+#
+# JRE version:  (21.0.3+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (21.0.3+9-LTS, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# Problematic frame:
+# C  [VCRUNTIME140.dll+0x19a9]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dapplication.home=E:\Eclipse with JDK --add-modules=ALL-DEFAULT -Xms8m -Djdk.module.main=jdk.compiler jdk.compiler/com.sun.tools.javac.Main Final.java
+
+Host: Intel(R) Core(TM) M-5Y10c CPU @ 0.80GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+Time: Sat May 18 19:17:28 2024 Pakistan Standard Time elapsed time: 0.121989 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x000000b63c200000,0x000000b63c300000],  sp=0x000000b63c2ff610,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [VCRUNTIME140.dll+0x19a9]
+V  [jvm.dll+0x6ec3a5]
+V  [jvm.dll+0x6eb09c]
+V  [jvm.dll+0x6eac11]
+V  [jvm.dll+0x3b8282]
+V  [jvm.dll+0x854215]
+V  [jvm.dll+0x44c55e]
+V  [jvm.dll+0x44e081]
+C  [jli.dll+0x5278]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17344]
+C  [ntdll.dll+0x526b1]
+
+
+siginfo: EXCEPTION_IN_PAGE_ERROR (0xc0000006), writing address 0x00000288456c0000
+
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00000288456c0000, RCX=0x0000000000010000, RDX=0x0000000000000000
+RSP=0x000000b63c2ff610, RBP=0x00000288455e5310, RSI=0x00000288455db7e0, RDI=0x00000288456c0000
+R8 =0x0000000000010000, R9 =0x00000288456c0000, R10=0x00007ff89dc30000, R11=0x0000000000000000
+R12=0x00007ff87d2a3ec0, R13=0x00000288455d0b10, R14=0x00000288455ced50, R15=0x0000000000010000
+RIP=0x00007ff89dc319a9, EFLAGS=0x0000000000010202
+
+
+Top of Stack: (sp=0x000000b63c2ff610)
+0x000000b63c2ff610:   0000000000000000 00007ff87d30c3a5
+0x000000b63c2ff620:   00000288455e5310 0000028800000000
+0x000000b63c2ff630:   00000288455db7e0 0000000000000170
+0x000000b63c2ff640:   0000000000010000 000000b63c2ff660
+0x000000b63c2ff650:   000000b63c2ff8e0 0000000000000104
+0x000000b63c2ff660:   0000000000000103 00000288455e5314
+0x000000b63c2ff670:   0000000000000101 0000000000000004
+0x000000b63c2ff680:   00000288455c0000 000000b63c2ff749
+0x000000b63c2ff690:   0000000000000002 00007ff8b481b3c7
+0x000000b63c2ff6a0:   0000028845540000 0000028800000000
+0x000000b63c2ff6b0:   0000000000000014 00007ff800000000
+0x000000b63c2ff6c0:   00000288005c3a43 00007ff800000002
+0x000000b63c2ff6d0:   0000000200000080 0000000000000000
+0x000000b63c2ff6e0:   00000288455c0378 000000b63c2ff6f4
+0x000000b63c2ff6f0:   00000003455402b8 0000000000000000
+0x000000b63c2ff700:   0000028845540d80 0000028847770f70
+0x000000b63c2ff710:   0000000000001000 0000000000000000
+0x000000b63c2ff720:   00000000001b0028 000000000000000c
+0x000000b63c2ff730:   00000288455e4a40 0000000000000060
+0x000000b63c2ff740:   0000000000001000 00000288455c6aee
+0x000000b63c2ff750:   0000028800000000 0000028845540d80
+0x000000b63c2ff760:   00000000001a0002 0000028845540000
+0x000000b63c2ff770:   000000b63c2ffe68 000000b63c2ffd78
+0x000000b63c2ff780:   00000288455d0b10 00007ff87d2a3ec0
+0x000000b63c2ff790:   0000000000000013 0000000000000009
+0x000000b63c2ff7a0:   000000b63c2ff850 00007ff8b253fde6
+0x000000b63c2ff7b0:   0000000000000000 0000000000000014
+0x000000b63c2ff7c0:   000000b63c2ff880 00007ff8b2530000
+0x000000b63c2ff7d0:   0000000000000013 00007ff87d2daac1
+0x000000b63c2ff7e0:   0000000000000014 0000000000000000
+0x000000b63c2ff7f0:   0000000000000000 00007ff87d2daac1
+0x000000b63c2ff800:   0000000000000009 00007ff87d2dcbba 
+
+Instructions: (pc=0x00007ff89dc319a9)
+0x00007ff89dc318a9:   49 03 c8 0f 10 44 11 f0 48 83 e9 10 49 83 e8 10
+0x00007ff89dc318b9:   f6 c1 0f 74 17 48 8b c1 48 83 e1 f0 0f 10 c8 0f
+0x00007ff89dc318c9:   10 04 11 0f 11 08 4c 8b c1 4d 2b c3 4d 8b c8 49
+0x00007ff89dc318d9:   c1 e9 07 74 6f 0f 29 01 eb 14 66 66 66 66 66 0f
+0x00007ff89dc318e9:   1f 84 00 00 00 00 00 0f 29 41 10 0f 29 09 0f 10
+0x00007ff89dc318f9:   44 11 f0 0f 10 4c 11 e0 48 81 e9 80 00 00 00 0f
+0x00007ff89dc31909:   29 41 70 0f 29 49 60 0f 10 44 11 50 0f 10 4c 11
+0x00007ff89dc31919:   40 49 ff c9 0f 29 41 50 0f 29 49 40 0f 10 44 11
+0x00007ff89dc31929:   30 0f 10 4c 11 20 0f 29 41 30 0f 29 49 20 0f 10
+0x00007ff89dc31939:   44 11 10 0f 10 0c 11 75 ae 0f 29 41 10 49 83 e0
+0x00007ff89dc31949:   7f 0f 28 c1 4d 8b c8 49 c1 e9 04 74 1a 66 66 0f
+0x00007ff89dc31959:   1f 84 00 00 00 00 00 0f 11 01 48 83 e9 10 0f 10
+0x00007ff89dc31969:   04 11 49 ff c9 75 f0 49 83 e0 0f 74 08 41 0f 10
+0x00007ff89dc31979:   0a 41 0f 11 0b 0f 11 01 49 8b c3 c3 cc cc cc cc
+0x00007ff89dc31989:   cc cc cc cc cc cc cc cc cc cc cc cc cc 66 66 0f
+0x00007ff89dc31999:   1f 84 00 00 00 00 00 57 8b c2 48 8b f9 49 8b c8
+0x00007ff89dc319a9:   f3 aa 49 8b c1 5f c3 cc cc cc cc cc cc 66 66 0f
+0x00007ff89dc319b9:   1f 84 00 00 00 00 00 48 8b c1 4c 8b c9 4c 8d 15
+0x00007ff89dc319c9:   33 e6 ff ff 0f b6 d2 49 bb 01 01 01 01 01 01 01
+0x00007ff89dc319d9:   01 4c 0f af da 66 49 0f 6e c3 49 83 f8 0f 0f 87
+0x00007ff89dc319e9:   83 00 00 00 0f 1f 00 49 03 c8 47 8b 8c 82 b0 80
+0x00007ff89dc319f9:   01 00 4d 03 ca 41 ff e1 4c 89 59 f1 44 89 59 f9
+0x00007ff89dc31a09:   66 44 89 59 fd 44 88 59 ff c3 4c 89 59 f2 44 89
+0x00007ff89dc31a19:   59 fa 66 44 89 59 fe c3 66 66 66 66 66 66 66 0f
+0x00007ff89dc31a29:   1f 84 00 00 00 00 00 4c 89 59 f3 44 89 59 fb 44
+0x00007ff89dc31a39:   88 59 ff c3 0f 1f 00 4c 89 59 f4 44 89 59 fc c3
+0x00007ff89dc31a49:   4c 89 59 f5 66 44 89 59 fd 44 88 59 ff c3 4c 89
+0x00007ff89dc31a59:   59 f7 44 88 59 ff c3 4c 89 59 f6 66 44 89 59 fe
+0x00007ff89dc31a69:   c3 4c 89 59 f8 c3 90 66 0f 6c c0 49 83 f8 20 77
+0x00007ff89dc31a79:   0c f3 0f 7f 01 f3 42 0f 7f 44 01 f0 c3 83 3d 8b
+0x00007ff89dc31a89:   45 01 00 03 0f 82 dd 01 00 00 4c 3b 05 86 45 01
+0x00007ff89dc31a99:   00 76 16 4c 3b 05 85 45 01 00 77 0d f6 05 10 49 
+
+
+
+---------------  P R O C E S S  ---------------
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Not initialized>
+
+Dll operation events (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7c7110000 - 0x00007ff7c7118000 	E:\Eclipse with JDK\bin\javac.exe
+0x00007ff8b47f0000 - 0x00007ff8b49e8000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8b4660000 - 0x00007ff8b471d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8b1ed0000 - 0x00007ff8b21c6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8b2530000 - 0x00007ff8b2630000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff8a8d90000 - 0x00007ff8a8da8000 	E:\Eclipse with JDK\bin\jli.dll
+0x00007ff8b3320000 - 0x00007ff8b34bf000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8b1ea0000 - 0x00007ff8b1ec2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff89dc30000 - 0x00007ff89dc4b000 	E:\Eclipse with JDK\bin\VCRUNTIME140.dll
+0x00007ff8b4720000 - 0x00007ff8b474b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8b23e0000 - 0x00007ff8b24f7000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8b2780000 - 0x00007ff8b281d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff89e290000 - 0x00007ff89e52a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5\COMCTL32.dll
+0x00007ff8b3f20000 - 0x00007ff8b3fbe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8b41a0000 - 0x00007ff8b41d2000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8a8d80000 - 0x00007ff8a8d8c000 	E:\Eclipse with JDK\bin\vcruntime140_1.dll
+0x00007ff89ad70000 - 0x00007ff89adfe000 	E:\Eclipse with JDK\bin\msvcp140.dll
+0x00007ff87cc20000 - 0x00007ff87d9a2000 	E:\Eclipse with JDK\bin\server\jvm.dll
+0x00007ff8b3ab0000 - 0x00007ff8b3b60000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8b3cf0000 - 0x00007ff8b3d90000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8b3980000 - 0x00007ff8b3aa3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8b2500000 - 0x00007ff8b2527000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ff8b3c80000 - 0x00007ff8b3ceb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff8b1d00000 - 0x00007ff8b1d4b000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ff8a7d10000 - 0x00007ff8a7d1a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff895a00000 - 0x00007ff895a27000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8b1ce0000 - 0x00007ff8b1cf2000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ff8aff10000 - 0x00007ff8aff22000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8a8c70000 - 0x00007ff8a8c7a000 	E:\Eclipse with JDK\bin\jimage.dll
+0x00007ff8afad0000 - 0x00007ff8afcb4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff89fea0000 - 0x00007ff89fed4000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8b26a0000 - 0x00007ff8b2722000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;E:\Eclipse with JDK\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3636_none_60b6a03d71f818d5;E:\Eclipse with JDK\bin\server
+
+VM Arguments:
+jvm_args: -Dapplication.home=E:\Eclipse with JDK --add-modules=ALL-DEFAULT -Xms8m -Djdk.module.main=jdk.compiler 
+java_command: jdk.compiler/com.sun.tools.javac.Main Final.java
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 8388608                                   {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1051597824                                {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {command line}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=E:\Eclipse with JDK\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\musht\AppData\Local\Microsoft\WindowsApps;E:\VS Code\Microsoft VS Code\bin
+USERNAME=musht
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+TMP=C:\Users\musht\AppData\Local\Temp
+TEMP=C:\Users\musht\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.3636)
+OS uptime: 0 days 2:07 hours
+
+CPU: total 4 (initial active 4) 
+Processor Information for all 4 processors :
+  Max Mhz: 1001, Current Mhz: 1001, Mhz Limit: 1001
+
+Memory: 4k page, system-wide physical 4011M (592M free)
+TotalPageFile size 5419M (AvailPageFile size 843M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (21.0.3+9-LTS) for windows-amd64 JRE (21.0.3+9-LTS), built on 2024-04-16T00:00:00Z by "admin" with MS VC++ 17.7 (VS2022)
+
+END.
